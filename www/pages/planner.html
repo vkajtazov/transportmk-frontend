@@ -1,0 +1,40 @@
+<div class="container well">
+        <div id="content">
+            <div class="row">
+                <div class="col-md-5">
+                    <div id="start">
+                        <input type="text" placeholder="Почеток" class="form-control" ng-model="startDestination" autofocus name="tel">
+                    </div>
+                </div>
+                <div class="col-md-2 text-center">
+                </div>
+                <div class="col-md-5">
+                    <div id="end">
+                        <input type="text" placeholder="Дестинација" class="form-control" ng-model="endDestination" autofocus name="tel">
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+    <div class="container well" id="content1">
+        <h1>Патување од {{startDestination}} до {{endDestination}}</h1>
+        <table class="table table-bordered sortable">
+            <thead>
+                <tr>
+                    <th class="col-md-3 unselectable">Место на тргнување</th>
+                    <th class="col-md-3 unselectable">Дестинација</th>
+                    <th class="col-md-3 unselectable">Тарифа</th>
+                    <th class="col-md-3 unselectable">Телефон</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="line in lines" ng-if="line.line.lineName === startDestination && line.vehicleType === endDestination ">
+                    <td>{{line.line.lineName}}</td>
+                    <td>{{line.vehicleType}}</td>
+                    <td>{{line.vehicleType}}</td>
+                    <td>{{line.regularityType}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>

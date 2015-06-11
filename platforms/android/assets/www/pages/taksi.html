@@ -1,0 +1,27 @@
+<div class="container well text-center">
+        <div class="text-center">
+            <label><input type="text" class="form-control" placeholder="Внеси компанија" autofocus ng-model="company"></label>
+    </div>
+    <br><br>
+        <table class="table table-bordered sortable">
+            <thead>
+                <tr>
+                    <th class="col-md-3 unselectable">Име</th>
+                    <th class="col-md-3 unselectable">Град</th>
+                    <th class="col-md-3 unselectable">Тарифа</th>
+                    <th class="col-md-3 unselectable">Телефон</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="taksi in lines" ng-if="taksi.line.lineName === company ">
+                    <td>{{taksi.line.lineName}}</td>
+                    <td>{{taksi.departureTime}}</td>
+                    <td>{{taksi.vehicleType}}</td>
+                    <td>{{taksi.regularityType}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <img src="img/spinner.gif" id="img" ng-show="toggle">
+    </div>

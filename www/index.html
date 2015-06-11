@@ -1,0 +1,54 @@
+<html ng-app="scotchApp">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/favicon.ico" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <script src="angular.min.js"></script>
+    <script src="angular-route.js"></script>
+    <script src="script.js"></script>
+    <script src="jquery.js"></script>
+    <script src="bootstrap.js"></script>
+    <script src="sorttable.js"></script>
+    <title>Транспорт МК</title>
+    
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="mainController" style="background-image: url('img/background.jpg')">
+
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        <a class="navbar-brand" href="#home">Транспорт МК</a>
+      </div>
+        <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="#linii"><i class="glyphicon glyphicon-road"></i> Линии</a></li>
+        <li><a href="#planner"><i class="glyphicon glyphicon-list-alt"></i> Планер</a></li>
+        <li><a href="#taksi"><i class="glyphicon glyphicon-phone"></i> Такси</a></li>
+        <li><a href="#kontakt"><i class="glyphicon glyphicon-envelope"></i> Контакт</a></li>
+      </ul>
+    </div>
+    </div>
+  </nav>
+    
+
+    <div id="main">
+  
+    <!-- angular templating -->
+		<!-- this is where content will be injected -->
+                <div ng-view></div>
+    
+  </div>
+  
+</body>
+
+</html>
